@@ -1,7 +1,7 @@
 <?php
 include ('script.php');
-include 'navbar.php';
 $title = 'Dashboard';
+include 'navbar.php';
 ?>
 
 <div class="container-fluid">
@@ -52,7 +52,7 @@ $title = 'Dashboard';
                  <th >Quantity</th>
                  <th >Description</th>
                  <th >Edit</th>
-                 <th >Delete</th>
+                 <!-- <th >Delete</th> -->
               </tr>
                 </thead>
                 <tbody>

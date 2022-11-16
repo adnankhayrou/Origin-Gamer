@@ -1,6 +1,6 @@
 <?php
-include 'navbar.php';
 $title = 'Login';
+include 'navbar.php';
 ?>
 
 

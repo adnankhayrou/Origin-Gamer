@@ -1,6 +1,7 @@
 <?php
-include 'navbar.php';
+include 'script.php'
 $title = 'Edit Game';
+include 'navbar.php';
 ?>
 
 <!-- add game form -->
@@ -36,9 +37,9 @@ $title = 'Edit Game';
 						
 					</div>
 					<div class="modal-footer mt-2">
-						<a href="dashboard.php" class="btn btn-white border mx-2" >Cancel</a>
-						<button type="submit" name="update" class="btn btn-warning task-action-btn" id="task-update-btn">Update</button> -->
-						<button type="submit" name="save" class="btn btn-dark text-light task-action-btn" id="task-save-btn">Edit game</button>
+						<a href="dashboard.php" class="btn btn-white border " >Cancel</a>
+                        <button type="button" name="delete" class="btn btn-danger text-light task-action-btn mx-2" id="game-delete-btn">Delete</button>
+						<button type="submit" name="edit" class="btn btn-dark task-action-btn" id="game-edit-btn">Edit Game</button>
 					</div>
 				</form>
 			</div>

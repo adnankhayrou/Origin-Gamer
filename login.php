@@ -1,6 +1,6 @@
 <?php
-include 'navbar.php';
 $title = 'Sign Up';
+include 'navbar.php';
 ?>
 
 

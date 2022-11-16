@@ -4,9 +4,9 @@
 
  session_start();
 
- if(isset($_POST['Add']))        addGame();
-//  if(isset($_POST['update']))      updateTask();                                                                                                                                          
- if(isset($_POST['delete']))      deleteGame();
+ if(isset($_POST['Add']))       addGame();
+ if(isset($_POST['edit']))      editGame();                                                                                                                                          
+ if(isset($_POST['delete']))    deleteGame();
 
  //counter
  $count = 0;
@@ -43,14 +43,18 @@
                 <td>'.$element['quantity'].'</td>
                 <td class="text-truncate">'.$element['description'].'</td>
                 <td><a href="editgame.php?id='.$element['id'].'"><i class="fa-solid fa-edit mx-2"></i></a></td>
-                <td><i class="fa-solid fa-trash text-danger mx-3" name="delete"></i></td>
+                <!--<td><i class="fa-solid fa-trash text-danger mx-3" name="delete"></i></td>-->
              </tr>
         ';
     }
  }
 
+ 
+ function editGame(){
 
- function deleteTask(){
+ }
+
+ function deleteGame(){
 
  }
 ?>
