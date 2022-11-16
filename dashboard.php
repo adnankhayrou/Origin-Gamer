@@ -37,7 +37,7 @@ $title = 'Dashboard';
 			     <div class="row">
              <h3 class=" text-end col-6 my-5">all games</h3>
           <div class=" col text-end">
-				     <button class="  rounded text-light bg-black mx-2 my-5" type="button" >Add Game <i class="fa-solid fa-plus"></i></button>
+				     <button class="  rounded text-light bg-black mx-2 my-5" href="#modal-task" data-bs-toggle="modal" type="button" >Add Game <i class="fa-solid fa-plus"></i></button>
          </div>
 			</div>
       <!-- ***********table of all games******************* -->
@@ -60,47 +60,11 @@ $title = 'Dashboard';
                 <td>Mark</td>
                 <td>23.99$</td>
                 <td>2331</td>
-                <td>@mdo hgrjrf hghff jgrjgf jrnjghg ghufnfg jrkgjg</td>
+                <td class="text-truncate">jnvjerng djbvjfbg grjgf jrnjghg ghufnfg jrkgjg</td>
                 <td><a href="editgame.php"><i class="fa-solid fa-edit mx-2"></i></a></td>
                 <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
              </tr>
 
-             <tr>
-                <th >2</th>
-                <td>Mark</td>
-                <td>19.99$</td>
-                <td>1255</td>
-                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
-                <td><i class="fa-solid fa-edit mx-2"></i></td>
-                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
-             </tr>
-             <tr>
-                <th >2</th>
-                <td>Mark</td>
-                <td>19.99$</td>
-                <td>1255</td>
-                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
-                <td><i class="fa-solid fa-edit mx-2"></i></td>
-                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
-             </tr>
-             <tr>
-                <th >2</th>
-                <td>Mark</td>
-                <td>19.99$</td>
-                <td>1255</td>
-                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
-                <td><i class="fa-solid fa-edit mx-2"></i></td>
-                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
-             </tr>
-             <tr>
-                <th >2</th>
-                <td>Mark</td>
-                <td>19.99$</td>
-                <td>1255</td>
-                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
-                <td><i class="fa-solid fa-edit mx-2"></i></td>
-                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
-             </tr>
              <tr>
                 <th >2</th>
                 <td>Mark</td>
@@ -198,58 +162,31 @@ $title = 'Dashboard';
 </div>
 
 
-	<!-- TASK MODAL -->
+	<!-- add game form -->
 	<div class="modal fade" id="modal-task">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<form action="" method="POST" id="form-task">
 					<div class="modal-header">
-						<h5 class="modal-title">Add Task</h5>
+						<h5 class="modal-title">Add Game</h5>
 						<a href="#" class="btn-close" data-bs-dismiss="modal"></a>
 					</div>
 					<div class="modal-body">
-							<!-- This Input Allows Storing Task Index  -->
+			
 							<input type="hidden" name="id" id="task-id">
 							<div class="mb-3">
-								<label class="form-label">Title</label>
-								<input type="text" name="Title" class="form-control" id="task-title" required/>
+								<label class="form-label">Name</label>
+								<input type="text" name="Name" class="form-control" id="task-title" required/>
 							</div>
-							<div class="mb-3">
-								<label class="form-label">Type</label>
-								<div class="ms-3">
-									<div class="form-check mb-1">
-										<input class="form-check-input" name="task-type" type="radio" value="1" id="task-type-feature" required/>
-										<label class="form-check-label" for="task-type-feature">Feature</label>
-									</div>
-									<div class="form-check">
-										<input class="form-check-input" name="task-type" type="radio" value="2" id="task-type-bug" required/>
-										<label class="form-check-label" for="task-type-bug">Bug</label>
-									</div>
-								</div>
-								
+
+                            <div class="mb-3">
+								<label class="form-label">Price</label>
+								<input type="Number" name="Price" class="form-control" id="task-title" required/>
 							</div>
+							
 							<div class="mb-3">
-								<label class="form-label">Priority</label>
-								<select class="form-select" name="Priority" id="task-priority" required>
-									<option value="">Please select</option>
-									<option value="1">Low</option>
-									<option value="2">Medium</option>
-									<option value="3">High</option>
-									<option value="4">Critical</option>
-								</select>
-							</div>
-							<div class="mb-3">
-								<label class="form-label">Status</label>
-								<select class="form-select" name="Status" id="task-status" required>
-									<option value="">Please select</option>
-									<option value="1">To Do</option>
-									<option value="2">In Progress</option>
-									<option value="3">Done</option>
-								</select>
-							</div>
-							<div class="mb-3">
-								<label class="form-label">Date</label>
-								<input type="date" name="Date" class="form-control" id="task-date"/ required>
+								<label class="form-label">Quantity</label>
+								<input type="number" name="Quantity" class="form-control" id="task-date"/ required>
 							</div>
 							<div class="mb-0">
 								<label class="form-label">Description</label>
@@ -258,11 +195,8 @@ $title = 'Dashboard';
 						
 					</div>
 					<div class="modal-footer">
-						<a href="#" class="btn btn-white" data-bs-dismiss="modal" id="task-cancel-btn">Cancel</a>
-						<!-- <button type="submit" name="delete" id="delete-btn" hidden></button>
-						<button type="button" onClick="Delete()" class="btn btn-danger task-action-btn" id="task-delete-btn">Delete</button>
-						<button type="submit" name="update" class="btn btn-warning task-action-btn" id="task-update-btn">Update</button> -->
-						<button type="submit" name="save" class="btn btn-primary task-action-btn" id="task-save-btn">Save</button>
+						<a href="#" class="btn btn-white border" data-bs-dismiss="modal" id="task-cancel-btn">Cancel</a>
+						<button type="submit" name="save" class="btn btn-dark text-light task-action-btn" id="task-save-btn">Add Game</button>
 					</div>
 				</form>
 			</div>
@@ -270,6 +204,7 @@ $title = 'Dashboard';
 	</div>
 
 
-
+    <script src="js/vendor.min.js"></script>
+	<script src="js/app.min.js"></script>
 </body>
 </html>
