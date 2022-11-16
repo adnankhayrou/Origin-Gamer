@@ -8,18 +8,18 @@ $title = 'Dashboard';
         <!-- ***********side bar************ -->
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
             <div class=" d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white vh-100">
-                <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+               
                     <span class="fs-4 d-none d-sm-inline my-5">Welcome<br> name name</span>
-                </a>
+                
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                     <li class="nav-item">
                         <a href="#" class="nav-link align-middle px-0">
                         <i class="fa-solid fa-house text-light"></i> <span class="ms-1 d-none d-sm-inline text-light">Home</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="#" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                        <i class="fa-solid fa-gauge text-light"></i> <span class="ms-1 d-none d-sm-inline text-light">Dashboard</span> </a>
+                    <li >
+                        <a href="dashboard.php" class="nav-link px-0 align-middle ">
+                        <i class="fa-solid fa-gauge text-light"></i> <span class="ms-1 d-none d-sm-inline text-light ">Dashboard</span> </a>
                     </li>
                     <li>
                         <a href="#" class="nav-link px-0 align-middle">
@@ -64,97 +64,6 @@ $title = 'Dashboard';
                 <td><a href="editgame.php"><i class="fa-solid fa-edit mx-2"></i></a></td>
                 <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
              </tr>
-
-             <tr>
-                <th >2</th>
-                <td>Mark</td>
-                <td>19.99$</td>
-                <td>1255</td>
-                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
-                <td><i class="fa-solid fa-edit mx-2"></i></td>
-                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
-             </tr>
-             <tr>
-                <th >2</th>
-                <td>Mark</td>
-                <td>19.99$</td>
-                <td>1255</td>
-                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
-                <td><i class="fa-solid fa-edit mx-2"></i></td>
-                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
-             </tr>
-             <tr>
-                <th >2</th>
-                <td>Mark</td>
-                <td>19.99$</td>
-                <td>1255</td>
-                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
-                <td><i class="fa-solid fa-edit mx-2"></i></td>
-                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
-             </tr>
-             <tr>
-                <th >2</th>
-                <td>Mark</td>
-                <td>19.99$</td>
-                <td>1255</td>
-                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
-                <td><i class="fa-solid fa-edit mx-2"></i></td>
-                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
-             </tr>
-             <tr>
-                <th >2</th>
-                <td>Mark</td>
-                <td>19.99$</td>
-                <td>1255</td>
-                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
-                <td><i class="fa-solid fa-edit mx-2"></i></td>
-                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
-             </tr>
-             <tr>
-                <th >2</th>
-                <td>Mark</td>
-                <td>19.99$</td>
-                <td>1255</td>
-                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
-                <td><i class="fa-solid fa-edit mx-2"></i></td>
-                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
-             </tr>
-             <tr>
-                <th >2</th>
-                <td>Mark</td>
-                <td>19.99$</td>
-                <td>1255</td>
-                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
-                <td><i class="fa-solid fa-edit mx-2"></i></td>
-                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
-             </tr>
-             <tr>
-                <th >2</th>
-                <td>Mark</td>
-                <td>19.99$</td>
-                <td>1255</td>
-                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
-                <td><i class="fa-solid fa-edit mx-2"></i></td>
-                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
-             </tr>
-             <tr>
-                <th >2</th>
-                <td>Mark</td>
-                <td>19.99$</td>
-                <td>1255</td>
-                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
-                <td><i class="fa-solid fa-edit mx-2"></i></td>
-                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
-             </tr>
-             <tr>
-                <th >2</th>
-                <td>Mark</td>
-                <td>19.99$</td>
-                <td>1255</td>
-                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
-                <td><i class="fa-solid fa-edit mx-2"></i></td>
-                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
-             </tr>
                </tbody>
             </table>
         </div>
@@ -168,7 +77,7 @@ $title = 'Dashboard';
 			<div class="modal-content">
 				<form action="" method="POST" id="form-task">
 					<div class="modal-header">
-						<h5 class="modal-title">Add Game</h5>
+						<h5 class="modal-title">New Game</h5>
 						<a href="#" class="btn-close" data-bs-dismiss="modal"></a>
 					</div>
 					<div class="modal-body">
