@@ -1,0 +1,19 @@
+.register-text{
+    text-decoration: none;
+}
+nav a{
+    font-family: 'Bree Serif', serif;
+}
+
+
+
+aside li {
+    list-style: none;  
+    color: white; 
+}
+
+aside a{
+    text-decoration: none;
+    font-size: large;
+    color: white;
+}
