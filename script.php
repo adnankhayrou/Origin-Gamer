@@ -51,7 +51,18 @@
 
  
  function editGame(){
+  $id  = $_POST['id'];
+  $Name = $_POST['Name'];
+  $Price = $_POST['Price'];
+  $Quantity = $_POST['Quantity'];
+  $Description = $_POST['Description'];
 
+  require 'database.php';
+
+  $updatefrom = "UPDATE games SET name = '$Name', price = '$Price', quantity = '$Quantity', description = '$Description' WHERE id = '$id'";
+  mysqli_query($connect,$updatefrom);
+
+  header('location: dashboard.php');
  }
 
  function deleteGame(){

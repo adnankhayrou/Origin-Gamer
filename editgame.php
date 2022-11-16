@@ -1,7 +1,16 @@
 <?php
-include 'script.php'
+include 'script.php';
 $title = 'Edit Game';
 include 'navbar.php';
+
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+
+    $select = "SELECT * FROM games WHERE id = $id";
+    $query = mysqli_query($connect, $select);
+    $game = mysqli_fetch_assoc($query);
+
+
 ?>
 
 <!-- add game form -->
@@ -15,24 +24,24 @@ include 'navbar.php';
 					</div>
 					<div class="modal-body">
 			
-							<input type="hidden" name="id" id="task-id">
+							<input type="hidden" name="id" id="task-id" value="<?php echo $id ?>">
 							<div class="mb-3">
 								<label class="form-label">Name</label>
-								<input type="text" name="Name" class="form-control" id="task-title" required/>
+								<input type="text" name="Name" class="form-control" value="<?php echo $game['name'] ?>" id="task-title" required/>
 							</div>
 
                             <div class="mb-3">
 								<label class="form-label">Price</label>
-								<input type="text" name="Price" class="form-control" id="task-title" required/>
+								<input type="text" name="Price" class="form-control" value="<?php echo $game['price'] ?>" id="task-title" required/>
 							</div>
 							
 							<div class="mb-3">
 								<label class="form-label">Quantity</label>
-								<input type="number" name="Quantity" class="form-control" id="task-date"/ required>
+								<input type="number" name="Quantity" class="form-control" value="<?php echo $game['quantity'] ?>" id="task-date"/ required>
 							</div>
 							<div class="mb-0">
 								<label class="form-label">Description</label>
-								<textarea class="form-control" name="Description" rows="10" id="task-description" required></textarea>
+								<textarea class="form-control" name="Description" rows="10" id="task-description" required><?php echo $game['description'] ?></textarea>
 							</div>
 						
 					</div>
@@ -45,7 +54,9 @@ include 'navbar.php';
 			</div>
 		</div>
 	</div>
-
+<?php
+}
+?>
 
     <script src="js/vendor.min.js"></script>
 	<script src="js/app.min.js"></script>
