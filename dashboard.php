@@ -1,4 +1,5 @@
 <?php
+include ('script.php');
 include 'navbar.php';
 $title = 'Dashboard';
 ?>
@@ -55,7 +56,11 @@ $title = 'Dashboard';
               </tr>
                 </thead>
                 <tbody>
-             <tr>
+                <?php
+				 // DATA FROM getGames() FUNCTION
+				  getGames();
+				?>
+             <!-- <tr>
                 <th >1</th>
                 <td>Mark</td>
                 <td>23.99$</td>
@@ -63,7 +68,7 @@ $title = 'Dashboard';
                 <td class="text-truncate">jnvjerng djbvjfbg grjgf jrnjghg ghufnfg jrkgjg</td>
                 <td><a href="editgame.php"><i class="fa-solid fa-edit mx-2"></i></a></td>
                 <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
-             </tr>
+             </tr> -->
                </tbody>
             </table>
         </div>
@@ -90,7 +95,7 @@ $title = 'Dashboard';
 
                             <div class="mb-3">
 								<label class="form-label">Price</label>
-								<input type="Number" name="Price" class="form-control" id="task-title" required/>
+								<input type="Number" name="Price" class="form-control" id="task-title" />
 							</div>
 							
 							<div class="mb-3">
@@ -105,7 +110,7 @@ $title = 'Dashboard';
 					</div>
 					<div class="modal-footer">
 						<a href="#" class="btn btn-white border" data-bs-dismiss="modal" id="task-cancel-btn">Cancel</a>
-						<button type="submit" name="save" class="btn btn-dark text-light task-action-btn" id="task-save-btn">Add Game</button>
+						<button type="submit" name="Add" class="btn btn-dark text-light task-action-btn" id="game-save-btn">Add Game</button>
 					</div>
 				</form>
 			</div>

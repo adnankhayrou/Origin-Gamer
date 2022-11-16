@@ -2,7 +2,7 @@
 
 $ServerName = 'localhost';
 $UserName = 'root';
-$Password = 
+$Password = '';
 $DataBaseName = 'origingamer';
 
 $connect = mysqli_connect($ServerName, $UserName, $Password, $DataBaseName);
