@@ -1,4 +1,3 @@
-//header and navbar
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -6,8 +6,8 @@ $title = 'Dashboard';
 <div class="container-fluid">
     <div class="row flex-nowrap">
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
-          //***********side bar************
-            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white vh-100">
+          <!-- ***********side bar************ -->
+            <div class=" d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white vh-100">
                 <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                     <span class="fs-4 d-none d-sm-inline my-5">Welcome<br> name name</span>
                 </a>
@@ -32,7 +32,7 @@ $title = 'Dashboard';
                 </ul>
             </div>
         </div>
-        //***********title and add button***************
+        <!-- ***********title and add button*************** -->
         <div class="col py-3">
 			     <div class="row">
              <h3 class=" text-end col-6 my-5">all games</h3>
@@ -40,7 +40,7 @@ $title = 'Dashboard';
 				     <button class="  rounded text-light bg-black mx-2 my-5" type="button" >Add Game <i class="fa-solid fa-plus"></i></button>
          </div>
 			</div>
-      //***********table of all games*******************
+      <!-- ***********table of all games******************* -->
      <div>
            <table class="table">
               <thead class="bg-dark text-light">
@@ -65,6 +65,267 @@ $title = 'Dashboard';
                 <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
              </tr>
 
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
+             <tr>
+                <th >2</th>
+                <td>Mark</td>
+                <td>19.99$</td>
+                <td>1255</td>
+                <td>@mdo ngfjjg jfkrfhg kdhght jhbfi kfjngfbngj jfhgb</td>
+                <td><i class="fa-solid fa-edit mx-2"></i></td>
+                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
+             </tr>
              <tr>
                 <th >2</th>
                 <td>Mark</td>
