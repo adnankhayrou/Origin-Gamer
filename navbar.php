@@ -13,9 +13,9 @@
     <title><?php echo $title ?></title>
 </head>
 <body>
+    
 <nav class="navbar navbar-dark bg-black fixed-top">
-
     <div class="container-fluid">
-      <a class="navbar-brand mx-2" href="#">ORIGIN GAMER</a>
+      <span class="navbar-brand mx-2" >ORIGIN GAMER</span>
      </div>
   </nav>
