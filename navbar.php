@@ -13,7 +13,7 @@
     <title><?php echo $title ?></title>
 </head>
 <body>
-    
+
 <nav class="navbar navbar-dark bg-black fixed-top">
     <div class="container-fluid">
       <span class="navbar-brand mx-2" >ORIGIN GAMER</span>

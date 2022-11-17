@@ -7,7 +7,8 @@
  if(isset($_POST['Add']))       addGame();
  if(isset($_POST['edit']))      editGame();                                                                                                                                          
  if(isset($_POST['delete']))    deleteGame();
-
+ if(isset($_POST['signup']))    signup();
+ if(isset($_POST['login']))     login();
  //counter
  $count = 0;
  
@@ -83,5 +84,19 @@
     mysqli_query($connect, $deleteFrom);
 
     header('location: dashboard.php');
+ }
+
+ function signup(){
+   
+   $fullName = htmlspecialchars(trim($_POST['Name']));
+   $Email = htmlspecialchars(strtolower(trim($_POST['Email'])));
+   $Password = htmlspecialchars(trim(md5($_POST['Password'])));
+   require 'database.php';
+   $query = "INSERT INTO admins (name, email, password) VALUES('$fullName','$Email','$Password')";
+   mysqli_query($connect, $query);
+}
+
+ function login(){
+
  }
 ?>

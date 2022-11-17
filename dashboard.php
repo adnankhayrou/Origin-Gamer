@@ -7,7 +7,7 @@ include 'navbar.php';
 <div class="container-fluid">
     <div class="row flex-nowrap">
         <!-- ***********side bar************ -->
-        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark position-fixed">
             <div class=" d-flex flex-column align-items-center align-items-sm-start my-5 px-3 pt-2 text-white vh-100">
                
                     <span class="fs-4 d-none d-sm-inline my-3">Welcome<br> name name</span>
@@ -36,23 +36,23 @@ include 'navbar.php';
         <!-- ***********title and add button*************** -->
         <div class="test col py-3">
 			     <div class="row">
-             <h3 class=" text-end col-6 my-5">all games</h3>
+             <h3 class=" text-end col-7 my-5">all games</h3>
           <div class=" col text-end">
 				     <button class="  rounded text-light bg-black mx-2 my-5" href="#modal-task" data-bs-toggle="modal" type="button" >Add Game <i class="fa-solid fa-plus"></i></button>
          </div>
 			</div>
       <!-- ***********table of all games******************* -->
-     <div class="test">
-           <table class="table">
+     <div class="col-lg-10 col-md-9 col-sm-6 float-end text-center overflow-auto">
+           <table class="table ">
               <thead class="bg-dark text-light">
                <tr>
                  <th ">#<?php echo cnount()?></th>
                  <th >Name</th>
-                 <th >Price</th>
+                 <th >Price$</th>
                  <th >Quantity</th>
                  <th >Description</th>
                  <th >Edit</th>
-              </tr>
+              </tr> 
                 </thead>
                 <tbody>
                 <?php
