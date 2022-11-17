@@ -1,5 +1,5 @@
 <?php
-include ('script.php');
+include 'script.php';
 $title = 'Dashboard';
 include 'navbar.php';
 ?>
@@ -8,9 +8,9 @@ include 'navbar.php';
     <div class="row flex-nowrap">
         <!-- ***********side bar************ -->
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
-            <div class=" d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white vh-100">
+            <div class=" d-flex flex-column align-items-center align-items-sm-start my-5 px-3 pt-2 text-white vh-100">
                
-                    <span class="fs-4 d-none d-sm-inline my-5">Welcome<br> name name</span>
+                    <span class="fs-4 d-none d-sm-inline my-3">Welcome<br> name name</span>
                 
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                     <li class="nav-item">
@@ -52,7 +52,6 @@ include 'navbar.php';
                  <th >Quantity</th>
                  <th >Description</th>
                  <th >Edit</th>
-                 <!-- <th >Delete</th> -->
               </tr>
                 </thead>
                 <tbody>
@@ -60,15 +59,6 @@ include 'navbar.php';
 				 // DATA FROM getGames() FUNCTION
 				  getGames();
 				?>
-             <!-- <tr>
-                <th >1</th>
-                <td>Mark</td>
-                <td>23.99$</td>
-                <td>2331</td>
-                <td class="text-truncate">jnvjerng djbvjfbg grjgf jrnjghg ghufnfg jrkgjg</td>
-                <td><a href="editgame.php"><i class="fa-solid fa-edit mx-2"></i></a></td>
-                <td><i class="fa-solid fa-trash text-danger mx-3"></i></td>
-             </tr> -->
                </tbody>
             </table>
         </div>
@@ -120,5 +110,7 @@ include 'navbar.php';
 
     <script src="js/vendor.min.js"></script>
 	<script src="js/app.min.js"></script>
+
+    <script src="js/app.js"></script>
 </body>
 </html>

@@ -47,8 +47,9 @@ if (isset($_GET['id'])) {
 					</div>
 					<div class="modal-footer mt-2">
 						<a href="dashboard.php" class="btn btn-white border " >Cancel</a>
-                        <button type="button" name="delete" class="btn btn-danger text-light task-action-btn mx-2" id="game-delete-btn">Delete</button>
-						<button type="submit" name="edit" class="btn btn-dark task-action-btn" id="game-edit-btn">Edit Game</button>
+                        <button type="button" class="btn btn-danger text-light task-action-btn mx-2" id="delete-button">Delete</button>
+                        <button type="submit" name="delete" hidden id="delete-submit">Delete</button>
+						<button type="submit" name="edit" class="btn btn-dark task-action-btn" >Edit Game</button>
 					</div>
 				</form>
 			</div>
@@ -60,5 +61,7 @@ if (isset($_GET['id'])) {
 
     <script src="js/vendor.min.js"></script>
 	<script src="js/app.min.js"></script>
+
+    <script src="js/app.js"></script>
 </body>
 </html>
