@@ -94,9 +94,30 @@
    require 'database.php';
    $query = "INSERT INTO admins (name, email, password) VALUES('$fullName','$Email','$Password')";
    mysqli_query($connect, $query);
+
+   header('location: login.php');
 }
 
  function login(){
+   require 'database.php';
 
+   $query = "SELECT * FROM admins";
+   mysqli_query($connect, $query);
+
+   if(isset($_POST['login'])){
+
+      $Email = $_POST['Email'];
+      $Password = md5($_POST['Password']);
+
+      $query = "SELECT * FROM admins WHERE email='$Email' && password='$Password'";
+
+      if(mysqli_num_rows(mysqli_query($connect, $query))){
+         $_SESSION['Email']=$Email;
+         header('location: dashboard.php');
+      }else {
+         echo 'incorrect inputs';
+      }
+   }
+  
  }
 ?>
