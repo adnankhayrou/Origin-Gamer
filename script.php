@@ -49,6 +49,16 @@
     }
  }
 
+ function cnount(){
+    require 'database.php';
+    $countAll = "SELECT * FROM games";
+
+    $query = mysqli_query($connect, $countAll);
+    $counter = mysqli_num_rows($query);
+
+    return $counter;
+ }
+
  
  function editGame(){
   $id  = $_POST['id'];
@@ -66,6 +76,12 @@
  }
 
  function deleteGame(){
+    require 'database.php';
 
+    $id = $_POST['id'];
+    $deleteFrom = "DELETE FROM games WHERE id = '$id'";
+    mysqli_query($connect, $deleteFrom);
+
+    header('location: dashboard.php');
  }
 ?>

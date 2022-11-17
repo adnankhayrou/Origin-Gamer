@@ -46,7 +46,7 @@ include 'navbar.php';
            <table class="table">
               <thead class="bg-dark text-light">
                <tr>
-                 <th ">#</th>
+                 <th ">#<?php echo cnount()?></th>
                  <th >Name</th>
                  <th >Price</th>
                  <th >Quantity</th>
