@@ -9,8 +9,6 @@
  if(isset($_POST['delete']))    deleteGame();
  if(isset($_POST['signup']))    signup();
  if(isset($_POST['login']))     login();
- //counter
- $count = 0;
  
  function addGame(){
 
@@ -33,7 +31,7 @@
     $selectFrom = "SELECT * FROM games";
     $query = mysqli_query($connect,$selectFrom);
 
-    global $count;
+    $count=0;
     while ($element = mysqli_fetch_assoc($query)) {
         $count++;
         echo '
