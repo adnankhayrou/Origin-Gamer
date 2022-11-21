@@ -3,13 +3,16 @@ include 'script.php';
 $title = 'Edit Game';
 include 'navbar.php';
 
+if(!isset($_SESSION['name'])){
+	header('location: login.php');
+ }
+
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
     $select = "SELECT * FROM games WHERE id = $id";
     $query = mysqli_query($connect, $select);
     $game = mysqli_fetch_assoc($query);
-
 
 ?>
 
@@ -47,8 +50,8 @@ if (isset($_GET['id'])) {
 					</div>
 					<div class="modal-footer mt-2">
 						<a href="dashboard.php" class="btn btn-white border " >Cancel</a>
-                        <button type="button" class="btn btn-danger text-light task-action-btn mx-2" id="delete-button">Delete</button>
-                        <button type="submit" name="delete" hidden id="delete-submit">Delete</button>
+                        <button onClick="deleteGame()" type="button" class="btn btn-danger text-light task-action-btn mx-2" id="delete-button">Delete</button>
+                        <button type="submit" name="delete" hidden id="delete-submit"></button>
 						<button type="submit" name="edit" class="btn btn-dark task-action-btn" >Edit Game</button>
 					</div>
 				</form>

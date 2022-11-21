@@ -2,6 +2,7 @@
 include 'script.php';
 $title = 'Sign Up';
 include 'navbar.php';
+
 ?>
 
 

@@ -9,15 +9,16 @@
  if(isset($_POST['delete']))    deleteGame();
  if(isset($_POST['signup']))    signup();
  if(isset($_POST['login']))     login();
+ if(isset($_GET['action']) && $_GET['action'] === 'logOut') logOut();
  
  function addGame(){
+   require 'database.php';
 
   $Name = $_POST['Name'];
   $Price = $_POST['Price'];
   $Quantity = $_POST['Quantity'];
   $Description = $_POST['Description'];
 
-  require 'database.php';
 
   $sendTo = "INSERT INTO games(name, price, quantity, description) VALUES('$Name', '$Price', '$Quantity', '$Description')";
   mysqli_query($connect,$sendTo);
@@ -60,13 +61,13 @@
 
  
  function editGame(){
+  require 'database.php';
+
   $id  = $_POST['id'];
   $Name = $_POST['Name'];
   $Price = $_POST['Price'];
   $Quantity = $_POST['Quantity'];
   $Description = $_POST['Description'];
-
-  require 'database.php';
 
   $updatefrom = "UPDATE games SET name = '$Name', price = '$Price', quantity = '$Quantity', description = '$Description' WHERE id = '$id'";
   mysqli_query($connect,$updatefrom);
@@ -85,11 +86,12 @@
  }
 
  function signup(){
+   require 'database.php';
    
    $fullName = htmlspecialchars(trim($_POST['Name']));
    $Email = htmlspecialchars(strtolower(trim($_POST['Email'])));
    $Password = htmlspecialchars(trim(md5($_POST['Password'])));
-   require 'database.php';
+   
    $query = "INSERT INTO admins (name, email, password) VALUES('$fullName','$Email','$Password')";
    mysqli_query($connect, $query);
 
@@ -99,23 +101,32 @@
  function login(){
    require 'database.php';
 
-   $query = "SELECT * FROM admins";
-   mysqli_query($connect, $query);
-
-   if(isset($_POST['login'])){
-
       $Email = $_POST['Email'];
-      $Password = md5($_POST['Password']);
+      $Password =md5($_POST['Password']);
+      // echo $Password;
 
-      $query = "SELECT * FROM admins WHERE email='$Email' && password='$Password'";
+      $query = "SELECT * FROM admins WHERE email='$Email' AND password='$Password'";
+      $res = mysqli_query($connect, $query);
+      $data = mysqli_fetch_assoc($res);
+      // var_dump($data);
 
-      if(mysqli_num_rows(mysqli_query($connect, $query))){
-         $_SESSION['Email']=$Email;
+      $test = mysqli_num_rows($res);
+      if($test > 0){
+         $_SESSION['name'] = $data['name'];
+         // $_SESSION['id']=$data['id'];
          header('location: dashboard.php');
       }else {
          echo 'incorrect inputs';
       }
-   }
   
+ }
+
+
+ function logOut(){
+   if (isset($_SESSION['name'])) {
+      unset($_SESSION['name']);
+      // session_destroy();
+      header('location: login.php');
+   }
  }
 ?>

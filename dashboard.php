@@ -2,6 +2,11 @@
 include 'script.php';
 $title = 'Dashboard';
 include 'navbar.php';
+
+
+if(!isset($_SESSION['name'])){
+   header('location: login.php');
+}
 ?>
 
 <div class="container-fluid">
@@ -10,7 +15,7 @@ include 'navbar.php';
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark position-fixed">
             <div class=" d-flex flex-column align-items-center align-items-sm-start my-5 px-3 pt-2 text-white vh-100">
                
-                    <span class="fs-4 d-none d-sm-inline my-3">Welcome<br> name name</span>
+                    <span class="fs-4 d-none d-sm-inline my-3">Welcome<br><?php echo $_SESSION['name'] ?></span>
                 
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                     <li class="nav-item">
@@ -27,7 +32,7 @@ include 'navbar.php';
                         <i class="fa-solid fa-user text-light"></i> <span class="ms-1 d-none d-sm-inline text-light">Profile</span> </a>
                     </li>
                     <li>
-                        <a href="login.php" class="nav-link px-0 align-middle">
+                        <a href="script.php?&action=logOut" class="nav-link px-0 align-middle">
                         <i class="fa-solid fa-right-from-bracket text-light"></i> <span class="ms-1 d-none d-sm-inline text-light">Sign out</span> </a>
                     </li>
                 </ul>
@@ -46,12 +51,12 @@ include 'navbar.php';
            <table class="table ">
               <thead class="bg-dark text-light">
                <tr>
-                 <th ">#<?php echo cnount()?></th>
-                 <th >Name</th>
-                 <th >Price$</th>
-                 <th >Quantity</th>
-                 <th >Description</th>
-                 <th >Edit</th>
+                 <th scope="col">#<?php echo cnount();?></th>
+                 <th scope="col">Name</th>
+                 <th scope="col">Price$</th>
+                 <th scope="col">Quantity</th>
+                 <th scope="col">Description</th>
+                 <th scope="col">Edit</th>
               </tr> 
                 </thead>
                 <tbody>
@@ -108,8 +113,8 @@ include 'navbar.php';
 	</div>
 
 
-    <script src="js/vendor.min.js"></script>
-	<script src="js/app.min.js"></script>
+    <!-- <script src="js/vendor.min.js"></script> -->
+	<!-- <script src="js/app.min.js"></script> -->
 
     <script src="js/app.js"></script>
 </body>
