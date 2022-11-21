@@ -75,22 +75,22 @@ if(!isset($_SESSION['name'])){
 	<div class="modal fade" id="modal-task">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<form action="" method="POST" id="form-task">
+				<form action="" method="POST" id="form" data-parsley-validate>
 					<div class="modal-header">
 						<h5 class="modal-title">New Game</h5>
 						<a href="#" class="btn-close" data-bs-dismiss="modal"></a>
 					</div>
 					<div class="modal-body">
 			
-							<input type="hidden" name="id" id="task-id">
+							<input type="hidden" name="id" >
 							<div class="mb-3">
 								<label class="form-label">Name</label>
-								<input type="text" name="Name" class="form-control" id="task-title" required/>
+								<input type="text" name="Name" class="form-control" data-parsley-minlength="3" required/>
 							</div>
 
                             <div class="mb-3">
 								<label class="form-label">Price</label>
-								<input type="Number" name="Price" class="form-control" id="task-title" />
+								<input type="Number" name="Price" class="form-control" step="any" required/>
 							</div>
 							
 							<div class="mb-3">
@@ -99,7 +99,7 @@ if(!isset($_SESSION['name'])){
 							</div>
 							<div class="mb-0">
 								<label class="form-label">Description</label>
-								<textarea class="form-control" name="Description" rows="10" id="task-description" required></textarea>
+								<textarea class="form-control" name="Description" rows="10" data-parsley-trigger="onkeyup" data-parsley-minlength="5" data-parsley-maxlength="100" data-parsley-minlength-message="You need to enter at least a 5 character comment.." data-parsley-validation-threshold="10" required></textarea>
 							</div>
 						
 					</div>
@@ -112,9 +112,6 @@ if(!isset($_SESSION['name'])){
 		</div>
 	</div>
 
-
-    <!-- <script src="js/vendor.min.js"></script> -->
-	<!-- <script src="js/app.min.js"></script> -->
 
     <script src="js/app.js"></script>
 </body>
