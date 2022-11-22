@@ -95,7 +95,7 @@
    
    $fullName = htmlspecialchars(trim($_POST['Name']));
    $Email = htmlspecialchars(strtolower(trim($_POST['Email'])));
-   $Password = htmlspecialchars(trim(md5($_POST['Password'])));
+   $Password = htmlspecialchars(password_hash($_POST['Password'],PASSWORD_BCRYPT));
    
    $query = "INSERT INTO admins (name, email, password) VALUES('$fullName','$Email','$Password')";
    mysqli_query($connect, $query);
@@ -107,21 +107,23 @@
    require 'database.php';
 
       $Email = $_POST['Email'];
-      $Password =md5($_POST['Password']);
-      // echo $Password;
+      $Password = $_POST['Password'];
 
-      $query = "SELECT * FROM admins WHERE email='$Email' AND password='$Password'";
+      $query = "SELECT * FROM admins WHERE email='$Email'";
       $res = mysqli_query($connect, $query);
       $data = mysqli_fetch_assoc($res);
-      // var_dump($data);
 
       $test = mysqli_num_rows($res);
       if($test > 0){
          $_SESSION['name'] = $data['name'];
-         // $_SESSION['id']=$data['id'];
-         header('location: dashboard.php');
-      }else {
+         $Password_v = password_verify($Password,$data['password']); 
+         if($Password_v == $Password){
+           
+            header('location: dashboard.php');
+        }else {
          echo 'incorrect inputs';
+      }
+         
       }
   
  }
