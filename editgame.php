@@ -18,7 +18,7 @@ if (isset($_GET['id'])) {
 
 <!-- add game form -->
 
-<div class="container w-25 mt-5">
+<div class="container d-flex- mt-5">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<form action="" method="POST" id="form" data-parsley-validate>
@@ -42,9 +42,21 @@ if (isset($_GET['id'])) {
 								<label class="form-label">Quantity</label>
 								<input type="number" name="Quantity" class="form-control" value="<?php echo $game['quantity'] ?>" required/>
 							</div>
+
+							<div class="mb-3">
+								<label class="form-label">Category</label>
+								<select class="form-select" name="categorey" required>
+									<option value="">Please select</option>
+									<option value="1"<?php echo ($game['category_id']== '1') ?  "selected" : "" ;?>>Action</option>
+									<option value="2"<?php echo ($game['category_id']== '2') ?  "selected" : "" ;?>>Adventure</option>
+									<option value="3"<?php echo ($game['category_id']== '3') ?  "selected" : "" ;?>>Shooting</option>
+									<option value="4"<?php echo ($game['category_id']== '4') ?  "selected" : "" ;?>>Horror</option>
+								</select>
+							</div>
+
 							<div class="mb-0">
 								<label class="form-label">Description</label>
-								<textarea class="form-control" name="Description" rows="10" data-parsley-trigger="keyup" data-parsley-minlength="5" data-parsley-maxlength="100" data-parsley-minlength-message="You need to enter at least a 20 character comment.." data-parsley-validation-threshold="10" required><?php echo $game['description'] ?></textarea>
+								<textarea class="form-control" name="Description" rows="7" data-parsley-trigger="keyup" data-parsley-minlength="5" data-parsley-maxlength="100" data-parsley-minlength-message="You need to enter at least a 20 character comment.." data-parsley-validation-threshold="10" required><?php echo $game['description'] ?></textarea>
 							</div>
 						
 					</div>

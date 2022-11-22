@@ -17,10 +17,11 @@
   $Name = $_POST['Name'];
   $Price = $_POST['Price'];
   $Quantity = $_POST['Quantity'];
+  $Category = $_POST['categorey'];
   $Description = $_POST['Description'];
 
 
-  $sendTo = "INSERT INTO games(name, price, quantity, description) VALUES('$Name', '$Price', '$Quantity', '$Description')";
+  $sendTo = "INSERT INTO games(name, price, quantity, category_id, description) VALUES('$Name', '$Price', '$Quantity','$Category', '$Description')";
   mysqli_query($connect,$sendTo);
 
   header('location: dashboard.php');
@@ -29,7 +30,9 @@
  function getGames(){
     require 'database.php';
 
-    $selectFrom = "SELECT * FROM games";
+   //  $selectFrom = "SELECT * FROM games";
+    $selectFrom = "SELECT category.nameCategory as CategoryName, games.* FROM games INNER JOIN category on category.id = games.category_id";
+   
     $query = mysqli_query($connect,$selectFrom);
 
     $count=0;
@@ -41,6 +44,7 @@
                 <td>'.$element['name'].'</td>
                 <td>'.$element['price'].'$</td>
                 <td>'.$element['quantity'].'</td>
+                <td>'.$element['CategoryName'].'</td>
                 <td class="text-truncate">'.$element['description'].'</td>
                 <td><a href="editgame.php?id='.$element['id'].'"><i class="fa-solid fa-edit mx-2"></i></a></td>
                 <!--<td><i class="fa-solid fa-trash text-danger mx-3" name="delete"></i></td>-->
@@ -49,7 +53,7 @@
     }
  }
 
- function cnount(){
+ function counter(){
     require 'database.php';
     $countAll = "SELECT * FROM games";
 
@@ -67,9 +71,10 @@
   $Name = $_POST['Name'];
   $Price = $_POST['Price'];
   $Quantity = $_POST['Quantity'];
+  $Category = $_POST['categorey'];
   $Description = $_POST['Description'];
 
-  $updatefrom = "UPDATE games SET name = '$Name', price = '$Price', quantity = '$Quantity', description = '$Description' WHERE id = '$id'";
+  $updatefrom = "UPDATE games SET name = '$Name', price = '$Price', quantity = '$Quantity',category_id = '$Category', description = '$Description' WHERE id = '$id'";
   mysqli_query($connect,$updatefrom);
 
   header('location: dashboard.php');
@@ -126,7 +131,7 @@
    if (isset($_SESSION['name'])) {
       // session_destroy();
       unset($_SESSION['name']);
-      
+
       header('location: login.php');
    }
  }

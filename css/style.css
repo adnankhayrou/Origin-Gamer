@@ -1,4 +1,4 @@
-.register-text{
+/* .register-text{
     text-decoration: none;
 }
 nav a{
@@ -16,5 +16,20 @@ aside a{
     text-decoration: none;
     font-size: large;
     color: white;
+} */
+
+#divTable{
+    margin-left: 16rem;
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    #divTable{
+        margin-left: 12rem;
+    }
+ }
+
+ @media (min-width: 320px) and (max-width: 450px) { 
+    #divTable{
+        margin-left: 3rem;
+    }
+  }

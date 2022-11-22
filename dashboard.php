@@ -43,18 +43,19 @@ if(!isset($_SESSION['name'])){
 			     <div class="row">
              <h3 class=" text-end col-7 my-5">all games</h3>
           <div class=" col text-end">
-				     <button class="  rounded text-light bg-black mx-2 my-5" href="#modal-task" data-bs-toggle="modal" type="button" >Add Game <i class="fa-solid fa-plus"></i></button>
+		    <button class="  rounded text-light bg-black mx-2 my-5" href="#modal-task" data-bs-toggle="modal" type="button" >Add Game <i class="fa-solid fa-plus"></i></button>
          </div>
 			</div>
       <!-- ***********table of all games******************* -->
-     <div class="col-lg-10 col-md-9 col-sm-6 float-end text-center overflow-auto">
-           <table class="table ">
+     <div class=" text-center table-responsive" id="divTable">
+           <table class="table">
               <thead class="bg-dark text-light">
                <tr>
-                 <th scope="col">#<?php echo cnount();?></th>
+                 <th scope="col">#<?php echo counter();?></th>
                  <th scope="col">Name</th>
                  <th scope="col">Price$</th>
                  <th scope="col">Quantity</th>
+                 <th scope="col">Category</th>
                  <th scope="col">Description</th>
                  <th scope="col">Edit</th>
               </tr> 
@@ -66,11 +67,9 @@ if(!isset($_SESSION['name'])){
 				?>
                </tbody>
             </table>
+          </div>
         </div>
-    </div>
-</div>
-
-
+      </div>
 	<!-- add game form -->
 	<div class="modal fade" id="modal-task">
 		<div class="modal-dialog">
@@ -97,9 +96,21 @@ if(!isset($_SESSION['name'])){
 								<label class="form-label">Quantity</label>
 								<input type="number" name="Quantity" class="form-control" id="task-date"/ required>
 							</div>
-							<div class="mb-0">
+							
+                            <div class="mb-3">
+								<label class="form-label">Categorey</label>
+								<select class="form-select" name="categorey" required>
+									<option value="">Please select</option>
+									<option value="1">Action</option>
+									<option value="2">Adventure</option>
+									<option value="3">Shooting</option>
+									<option value="4">Horror</option>
+								</select>
+							</div>
+
+                            <div class="mb-0">
 								<label class="form-label">Description</label>
-								<textarea class="form-control" name="Description" rows="10" data-parsley-trigger="onkeyup" data-parsley-minlength="5" data-parsley-maxlength="100" data-parsley-minlength-message="You need to enter at least a 5 character comment.." data-parsley-validation-threshold="10" required></textarea>
+								<textarea class="form-control" name="Description" rows="7" data-parsley-trigger="onkeyup" data-parsley-minlength="5" data-parsley-maxlength="100" data-parsley-minlength-message="You need to enter at least a 5 character comment.." data-parsley-validation-threshold="10" required></textarea>
 							</div>
 						
 					</div>
