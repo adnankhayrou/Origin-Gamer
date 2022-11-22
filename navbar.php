@@ -20,6 +20,6 @@
 
 <nav class="navbar navbar-dark bg-black fixed-top">
     <div class="container-fluid">
-      <span class="navbar-brand mx-2" >ORIGIN GAMER</span>
+      <span class="navbar-brand mx-2 fs-4" >ORIGIN GAMER</span>
      </div>
   </nav>

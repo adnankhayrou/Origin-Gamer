@@ -3,19 +3,9 @@ include 'script.php';
 $title = 'Login';
 include 'navbar.php';
 
-
-// if(isset($_POST['signup']))
-// {
-//    $fullName = htmlspecialchars(trim($_POST['Name']));
-//    $Email = htmlspecialchars(strtolower(trim($_POST['Email'])));
-//    $Password = htmlspecialchars(trim(md5($_POST['Password'])));
-  
-//    $query = "INSERT INTO admins (name, email, password) VALUES('$fullName','$Email','$Password')";
-//    mysqli_query($connect, $query);
-// }
 ?>
 
-
+<!-- edit game form -->
 <div class="vh-100 d-flex justify-content-center align-items-center">
     <form action="" method="POST" id="form-task" class="col-4" data-parsley-validate>
     <div class="modal-header row">

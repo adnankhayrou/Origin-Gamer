@@ -16,12 +16,10 @@ if (isset($_GET['id'])) {
 
 ?>
 
-<!-- add game form -->
+<!-- edit game form -->
 
-<div class="container d-flex- mt-5">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<form action="" method="POST" id="form" data-parsley-validate>
+			<div class="vh-100 d-flex justify-content-center align-items-center">
+				<form action="" method="POST" id="form" class="col-4 " data-parsley-validate>
 					<div class="modal-header row">
 						<h5 class="modal-title mt-5 text-center">Edit Game</h5>
 					</div>
@@ -47,10 +45,16 @@ if (isset($_GET['id'])) {
 								<label class="form-label">Category</label>
 								<select class="form-select" name="categorey" required>
 									<option value="">Please select</option>
-									<option value="1"<?php echo ($game['category_id']== '1') ?  "selected" : "" ;?>>Action</option>
-									<option value="2"<?php echo ($game['category_id']== '2') ?  "selected" : "" ;?>>Adventure</option>
-									<option value="3"<?php echo ($game['category_id']== '3') ?  "selected" : "" ;?>>Shooting</option>
-									<option value="4"<?php echo ($game['category_id']== '4') ?  "selected" : "" ;?>>Horror</option>
+									<?php
+                                
+                                    $selectFrom = "SELECT * FROM category";
+                                    $res = mysqli_query($connect,$selectFrom);
+                                    while ($category = mysqli_fetch_assoc($res)) {
+										?>
+                                       <option value="<?php echo $category['id'] ?>"<?php echo ($game['category_id'] == $category['id']) ?  "selected" : "" ;?>><?php echo $category['nameCategory'] ?></option>';
+								    <?php
+									}
+                                    ?>
 								</select>
 							</div>
 
@@ -68,8 +72,6 @@ if (isset($_GET['id'])) {
 					</div>
 				</form>
 			</div>
-		</div>
-	</div>
 <?php
 }
 ?>

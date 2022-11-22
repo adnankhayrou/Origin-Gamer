@@ -17,15 +17,16 @@ if(!isset($_SESSION['name'])){
                
                     <span class="fs-4 d-none d-sm-inline my-3">Welcome<br><?php echo $_SESSION['name'] ?></span>
                 
-                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link align-middle px-0">
-                        <i class="fa-solid fa-house text-light"></i> <span class="ms-1 d-none d-sm-inline text-light">Home</span>
-                        </a>
-                    </li>
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start pt-4" id="menu">
+                    
                     <li >
                         <a href="dashboard.php" class="nav-link px-0 align-middle ">
                         <i class="fa-solid fa-gauge text-light"></i> <span class="ms-1 d-none d-sm-inline text-light ">Dashboard</span> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="statistics.php" class="nav-link align-middle px-0">
+                        <i class="fa-solid fa-chart-pie text-light"></i> <span class="ms-1 d-none d-sm-inline text-light">Statistics</span>
+                        </a>
                     </li>
                     <li>
                         <a href="#" class="nav-link px-0 align-middle">
@@ -38,20 +39,22 @@ if(!isset($_SESSION['name'])){
                 </ul>
             </div>
         </div>
+        
         <!-- ***********title and add button*************** -->
-        <div class="test col py-3">
+        <div class="test col py-4">
 			     <div class="row">
              <h3 class=" text-end col-7 my-5">all games</h3>
           <div class=" col text-end">
 		    <button class="  rounded text-light bg-black mx-2 my-5" href="#modal-task" data-bs-toggle="modal" type="button" >Add Game <i class="fa-solid fa-plus"></i></button>
          </div>
 			</div>
+            
       <!-- ***********table of all games******************* -->
      <div class=" text-center table-responsive" id="divTable">
            <table class="table">
               <thead class="bg-dark text-light">
                <tr>
-                 <th scope="col">#<?php echo counter();?></th>
+                 <th scope="col">#<?php echo counterGames();?></th>
                  <th scope="col">Name</th>
                  <th scope="col">Price$</th>
                  <th scope="col">Quantity</th>
@@ -62,8 +65,23 @@ if(!isset($_SESSION['name'])){
                 </thead>
                 <tbody>
                 <?php
-				 // DATA FROM getGames() FUNCTION
-				  getGames();
+				      // DATA FROM getGames() FUNCTION
+				      $allGames = getGames();
+                  $count=1;
+                  while ($element = mysqli_fetch_assoc($allGames)) {
+                    ?>
+                      <tr>
+                       <th ><?php echo $count ?></th>
+                       <td><?php echo $element['name']?></td>
+                       <td><?php echo $element['price']?>$</td>
+                       <td><?php echo $element['quantity']?></td>
+                       <td><?php echo $element['CategoryName']?></td>
+                       <td class="text-truncate"><?php echo $element['description']?></td>
+                       <td><a href="editgame.php?id=<?php echo $element['id']?>"><i class="fa-solid fa-edit mx-2"></i></a></td>
+                    </tr>
+                  <?php
+                  $count++;      
+                  }
 				?>
                </tbody>
             </table>
@@ -101,10 +119,14 @@ if(!isset($_SESSION['name'])){
 								<label class="form-label">Categorey</label>
 								<select class="form-select" name="categorey" required>
 									<option value="">Please select</option>
-									<option value="1">Action</option>
-									<option value="2">Adventure</option>
-									<option value="3">Shooting</option>
-									<option value="4">Horror</option>
+                                    <?php
+                                
+                                    $selectFrom = "SELECT * FROM category";
+                                    $res = mysqli_query($connect,$selectFrom);
+                                    while ($category = mysqli_fetch_assoc($res)) {
+                                      echo ' <option value=" '.$category['id'].' ">  '.$category['nameCategory'].' </option>';
+                                    }
+                                    ?>
 								</select>
 							</div>
 

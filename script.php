@@ -30,30 +30,14 @@
  function getGames(){
     require 'database.php';
 
-   //  $selectFrom = "SELECT * FROM games";
     $selectFrom = "SELECT category.nameCategory as CategoryName, games.* FROM games INNER JOIN category on category.id = games.category_id";
    
     $query = mysqli_query($connect,$selectFrom);
-
-    $count=0;
-    while ($element = mysqli_fetch_assoc($query)) {
-        $count++;
-        echo '
-        <tr>
-                <th >'.$count.'</th>
-                <td>'.$element['name'].'</td>
-                <td>'.$element['price'].'$</td>
-                <td>'.$element['quantity'].'</td>
-                <td>'.$element['CategoryName'].'</td>
-                <td class="text-truncate">'.$element['description'].'</td>
-                <td><a href="editgame.php?id='.$element['id'].'"><i class="fa-solid fa-edit mx-2"></i></a></td>
-                <!--<td><i class="fa-solid fa-trash text-danger mx-3" name="delete"></i></td>-->
-             </tr>
-        ';
-    }
+    return  $query;
+   
  }
 
- function counter(){
+ function counterGames(){
     require 'database.php';
     $countAll = "SELECT * FROM games";
 
@@ -62,6 +46,46 @@
 
     return $counter;
  }
+
+ function counterAdmins(){
+   require 'database.php';
+   $countAll = "SELECT * FROM admins";
+
+   $query = mysqli_query($connect, $countAll);
+   $counter = mysqli_num_rows($query);
+
+   return $counter;
+}
+
+function counterCategorys(){
+   require 'database.php';
+   $countAll = "SELECT * FROM category";
+
+   $query = mysqli_query($connect, $countAll);
+   $counter = mysqli_num_rows($query);
+
+   return $counter;
+}
+
+function counterPrice(){
+   require 'database.php';
+   $countAll = "SELECT SUM(price) as Price FROM games";
+
+   $query = mysqli_query($connect, $countAll);
+   $counter = mysqli_fetch_assoc($query);
+   $price = $counter['Price'];
+   return  $price;
+}
+
+function counterQuantity(){
+   require 'database.php';
+   $countAll = "SELECT SUM(quantity) as Quantity FROM games";
+
+   $query = mysqli_query($connect, $countAll);
+   $counter = mysqli_fetch_assoc($query);
+   $Quantity = $counter['Quantity'];
+   return  $Quantity;
+}
 
  
  function editGame(){
