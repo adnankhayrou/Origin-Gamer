@@ -5,7 +5,7 @@
  session_start();
 
  if(isset($_POST['Add']))       addGame();
- if(isset($_POST['edit']))      editGame();                                                                                                                                          
+ if(isset($_POST['edit']))      editGame();                                 
  if(isset($_POST['delete']))    deleteGame();
  if(isset($_POST['signup']))    signup();
  if(isset($_POST['login']))     login();
@@ -87,7 +87,6 @@ function counterQuantity(){
    return  $Quantity;
 }
 
- 
  function editGame(){
   require 'database.php';
 
@@ -117,14 +116,23 @@ function counterQuantity(){
  function signup(){
    require 'database.php';
    
-   $fullName = htmlspecialchars(trim($_POST['Name']));
+   $fullName = mysqli_real_escape_string($connect,trim(($_POST['Name'])));
    $Email = htmlspecialchars(strtolower(trim($_POST['Email'])));
    $Password = htmlspecialchars(password_hash($_POST['Password'],PASSWORD_BCRYPT));
-   
-   $query = "INSERT INTO admins (name, email, password) VALUES('$fullName','$Email','$Password')";
-   mysqli_query($connect, $query);
 
-   header('location: login.php');
+   $compir = "SELECT * FROM admins WHERE email = '$Email'";
+   $query = mysqli_query($connect, $compir);
+
+   if (mysqli_num_rows($query) > 0) {
+
+      echo 'This Email already exist';
+   }else{
+
+      $query1 = "INSERT INTO admins (name, email, password) VALUES('$fullName','$Email','$Password')";
+      mysqli_query($connect, $query1);
+   
+      header('location: login.php');
+   }
 }
 
  function login(){
@@ -137,14 +145,16 @@ function counterQuantity(){
       $res = mysqli_query($connect, $query);
       $data = mysqli_fetch_assoc($res);
 
-      $test = mysqli_num_rows($res);
-      if($test > 0){
+      if(mysqli_num_rows($res) > 0){
+
          $_SESSION['name'] = $data['name'];
          $Password_v = password_verify($Password,$data['password']); 
+
          if($Password_v == $Password){
            
             header('location: dashboard.php');
         }else {
+
          echo 'incorrect inputs';
       }
          
@@ -152,10 +162,9 @@ function counterQuantity(){
   
  }
 
-
  function logOut(){
    if (isset($_SESSION['name'])) {
-      // session_destroy();
+      // sessiondestroy
       unset($_SESSION['name']);
 
       header('location: login.php');

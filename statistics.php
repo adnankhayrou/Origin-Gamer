@@ -1,6 +1,6 @@
 <?php
 include 'script.php';
-$title = 'Dashboard';
+$title = 'Statistics';
 include 'navbar.php';
 
 
@@ -62,7 +62,7 @@ if(!isset($_SESSION['name'])){
                         <div class=" card bg-black my-5 mx-5" style="width: 10rem; height: 6rem;">
                             <div class="float-end card-body">
                             <h5 class="card-title text-light">PRICE</h5>
-                            <p class="card-text text-light"><?php echo counterPrice();?></p>
+                            <p class="card-text text-light"><?php echo counterPrice();?>$</p>
                         </div>  
                         </div>
 
@@ -86,7 +86,7 @@ if(!isset($_SESSION['name'])){
               <thead class="bg-dark text-light">
                <tr>
                  <th scope="col">Name</th>
-                 <th scope="col">Price$</th>
+                 <th scope="col">Price</th>
                  <th scope="col">Quantity</th>
                  <th scope="col">Category</th>
                  <th scope="col">Description</th>

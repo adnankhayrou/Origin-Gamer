@@ -13,7 +13,7 @@ include 'navbar.php';
 					</div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" name="Email" class="form-control" aria-describedby="emailHelp" data-parsley-type="email" required>
+    <input type="email" name="Email" class="form-control" data-parsley-type="email" required>
     </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Password</label>

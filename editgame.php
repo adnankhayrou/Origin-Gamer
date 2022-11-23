@@ -5,7 +5,7 @@ include 'navbar.php';
 
 if(!isset($_SESSION['name'])){
 	header('location: login.php');
- }
+}
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
